@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="css/login_form.css">
+
+	<style>
+	
+	</style>
+   <style>
+ html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  padding-top: 70px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  background-color: #f5f5f5;
+}
+
+</style>
+</head>
+<body >
+
+<nav class="navbar navbar-fixed-top">
+  <div class="container">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div>
+      <ul class="nav navbar-nav navbar-right">
+		<li class="col-xs-3"><button onclick="zoomin();">A+</button></li>
+		<li class="col-xs-3"><button onclick="normal();">A</button></li>
+		<li class="col-xs-3"><button onclick="zoomout();">A-</button></li>
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+<nav class="navbar navbar-default navbar-fixed" style="background:;">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a href="index.php"><img src="http://disabilityaffairs.gov.in/images/indian-emblem.png" style="height:50px; width:40px"></a>
+	  <a href="index.php"><b><span style="font-size:30px;">&nbsp;Divyang</span></b></a>
+	  
+    </div>
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	  <div class="modal-dialog">
+				<div class="loginmodal-container">
+					<h1>Login to Your Account</h1><br>
+				  <form method="post" action="php/login.php">
+					<input type="text" name="user" placeholder="Username">
+					<input type="password" name="pass" placeholder="Password">
+					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
+				  </form>
+					
+				  <div class="login-help">
+					<a href="#">Forgot Password</a>
+					<br/><a href="http://www.swavlambancard.gov.in/pwd/application#form_block_1">Get UDID</a>
+				  </div>
+				</div>
+			</div>
+		  </div>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content col-sm-6">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title">Subscribe</h2>
+        </div>
+        <div class="modal-body">
+         <br>
+          <form method="POST">
+          <input type="text" name="uname" placeholder="Name" class="form-control" required>
+          <br>
+          <input type="email" id="email" placeholder="Email" class="form-control" required>
+          <br>
+
+          <input type="number" id="UserMobile" maxlength="14" data-fv-numeric="true" data-fv-numeric-message="Please enter valid phone numbers" data-fv-phone-country11="IN" required="required" data-fv-notempty-message="This field cannot be left blank." placeholder="Mobile No. " class="form-control" name="data[User][mobile]" data-fv-field="data[User][mobile]" required>
+                  
+          <br>
+          <label id="myCheck">Disability:</label>
+         <div class="checkbox">
+         <label><input type="checkbox" name="c1" value="0">General</label>
+         </div>
+         <div class="checkbox">
+         <label><input type="checkbox" name="c1" value="1">Vision</label>
+         </div>
+         <div class="checkbox">
+         <label><input type="checkbox" name="c1" value="2">Deaf</label>
+         </div>
+         <div class="checkbox">
+         <label><input type="checkbox" name="c1" value="3">Physical</label>
+         </div>
+         <div class="checkbox">
+         <label><input type="checkbox" name="c1" value="4">Mental</label>
+         </div>
+          <input type="submit" class="btn btn-primary" name="subscribe" value="Subscribe" onclick="check();">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+		<li style="padding-left:40px;"><a href="#"></a></li>
+        <li><a href="#">Home<span class="sr-only">(current)</span></a></li>
+		<li class="active"><a href="complaints.html">Complaints</a></li>
+		<li><a href="contact.html">Contact Us</a></li>
+		<li><a data-toggle="modal" data-target="#myModal">Subscribe</a></li>
+		<li><a data-toggle="modal" data-target="#login-modal">Login</a></li>
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+   
+	<div class="container">
+	<fieldset>
+		<div class="row">
+		<div class="col-md-12 text-center">
+		<div>
+			<strong><h4>Complaint / Feedback</h4></strong>
+		</div>
+		</div>
+		</div>
+    <br><br>
+		<div class="row">
+		<div class="col-xs-12 col-sm-10">
+                    <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">Name</label>                       
+						<div class="col-sm-4">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
+                        </div>
+						<label for="complaintdate" class="col-sm-2 control-label">Complaint Date</label>                       
+						<div class="col-sm-4">
+                        <input type="date" class="form-control" id="complaintdate" name="complaintdate">
+                        </div>
+                    </div>
+				
+                        <div class="form-group">
+                        <label for="mobileno" class="col-sm-2 control-label">Mobile Number</label>
+                        <div class="col-sm-4">
+                          <input type="tel" class="form-control" id="mobileno" name="mobileno">
+                        </div>
+						<label for="certifiedid" class="col-sm-2 control-label">UDID</label>                       
+						<div class="col-sm-4">
+                        <input type="text" class="form-control" id="certifiedid" name="certifiedid">
+                        </div>
+                    </div>
+					    <div class="form-group">
+                        <label for="state" class="col-sm-2 control-label">State</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="state" name="state" placeholder="State">
+                        </div>
+						<label for="category" class="col-sm-2 control-label">Category</label>                       
+						<div class="col-sm-4">
+                        <input type="text" class="form-control" id="category" name="category" placeholder="category">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="scheme" class="col-sm-2 control-label">Scheme</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="scheme" name="scheme" placeholder="Scheme">
+                        </div>
+                    </div>
+					      
+                                        <div class="form-group">
+                        <label for="description" class="col-sm-2 control-label">Description</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" id="description" name="description" rows="12"></textarea>
+                        </div>
+                    </div>
+					
+					     <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+
+ 
+
+
+                </form>
+
+
+            </div>
+
+		</div>
+		</fieldset>
+	</div>
+	<footer class="footer" style="background:silver;">
+      <div class="container">
+        <p class="text-muted"></p>
+      </div>
+</footer>
+
+</body>
+</html>

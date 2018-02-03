@@ -1,0 +1,111 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sechme Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="#">Divyang</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+		<li style="padding-left:40px;"><a href="#"></a></li>
+        <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+        <li><a href="#">About Us</a></li>
+		<li><a href="#">Schemes</a></li>
+		<li><a href="#">Rules</a></li>
+		<li><a href="#">Complaints</a></li>
+		<li><a href="#">Contact Us</a></li>
+		<li><a data-toggle="modal" data-target="#login-modal">login</a></li>
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<header></header>
+</br></br>
+
+	<div class="container">
+		<div class="row">
+				<div class="col-xs-12 col-sm-3 col-sm-push-4 ">
+			
+                <p style="padding:20px;"></p>
+				<div class="alert alert-warning text-center">
+				<a href="#" class="alert-link">Sechme Updates</a>.
+				</div>
+                
+            </div>
+		</div>
+		<div class="row">
+		<div class="col-xs-12 col-sm-10">
+                    <form class="form-horizontal" role="form" action="php/addscheme.php" method="POST">
+                    <div class="form-group">
+                        <label for="scheme" class="col-sm-2 control-label">Scheme ID</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="schemeid" name="schemeid" placeholder="Scheme ID">
+                        </div>
+                    </div>
+					 <div class="form-group">
+                        <label for="scheme" class="col-sm-2 control-label">Scheme Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="schemename" name="schemename" placeholder="Scheme Name">
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="description" class="col-sm-2 control-label">Description</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" id="schemedescriptionid" name="schemedescriptionname" rows="12"></textarea>
+                        </div>
+                    </div>
+					<div class="form-group">
+                        <label for="scheme" class="col-sm-2 control-label">Disability ID</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="DisabilityId" name="DisabilityIdName">
+                        </div>
+                    </div>
+					<div class="form-group text-center">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+					</form>
+		</div>
+		</div>
+	</div>
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+</body>
+</html>
